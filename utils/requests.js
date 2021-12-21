@@ -23,11 +23,11 @@ export default {
   },
   fetchRomanceMovies: {
     title: 'Romance',
-    url: `/trending/all/week?api_key=${API_KEY}&with_genres=10749`,
+    url: `/trending/movie?api_key=${API_KEY}&with_genres=10749`,
   },
   fetchMistery: {
     title: 'Mistery',
-    url: `/trending/all/week?api_key=${API_KEY}&with_genres=10749`,
+    url: `/trending/movie?api_key=${API_KEY}&with_genres=10749`,
   },
   fetchSciFi: {
     title: 'Sci-Fi',
