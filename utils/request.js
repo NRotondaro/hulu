@@ -19,7 +19,7 @@ export default {
   },
   fetchHorrorMovies: {
     title: 'Horror',
-    url: `/trending/all/week?api_key=${API_KEY}&with_genres=27`,
+    url: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
   },
   fetchRomanceMovies: {
     title: 'Romance',
