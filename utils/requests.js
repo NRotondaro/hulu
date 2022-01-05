@@ -23,11 +23,11 @@ const requests = {
   },
   fetchRomanceMovies: {
     title: 'Romance',
-    url: `/trending/movie?api_key=${API_KEY}&with_genres=10749`,
+    url: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
   },
   fetchMistery: {
     title: 'Mistery',
-    url: `/trending/movie?api_key=${API_KEY}&with_genres=10749`,
+    url: `/discover/movie?api_key=${API_KEY}&with_genres=9648`,
   },
   fetchSciFi: {
     title: 'Sci-Fi',
