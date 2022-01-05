@@ -2,7 +2,7 @@ import Thumbnail from './Thumbnail';
 import FlipMove from 'react-flip-move';
 
 interface ResultProps {
-  results: 
+  results: JSON;
 }
 
 export default function Results({ results }: ResultProps) {

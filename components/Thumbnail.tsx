@@ -2,7 +2,21 @@ import Image from 'next/image';
 import { ThumbUpIcon } from '@heroicons/react/outline';
 import { forwardRef } from 'react';
 
-const Thumbnail = forwardRef(({ result }, ref) => {
+interface ThumbnailProps {
+  result: {
+    backdrop_path: string;
+    poster_path: string;
+    overview: string;
+    title: string;
+    original_name: string; 
+    media_type: string;
+    release_date: string;
+    first_air_date: string;
+    vote_count: string;
+  }
+}
+
+const Thumbnail = forwardRef(({ result }: ThumbnailProps, ref) => {
   const BASE_URL = 'https://image.tmdb.org/t/p/original/';
 
   return (
@@ -13,11 +27,11 @@ const Thumbnail = forwardRef(({ result }, ref) => {
       <Image
         layout='intrinsic'
         src={
-          `${BASE_URL}${result.backgrop_path || result.poster_path}` ||
+          `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
           `${BASE_URL}${result.poster_path}`
         }
-        height={1024}
-        width={768}
+        height={1080}
+        width={1920}
         alt='thumbnail'
       />
       <div className='p-2'>
