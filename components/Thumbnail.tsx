@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { ThumbUpIcon } from '@heroicons/react/outline';
 import { forwardRef } from 'react';
 
-interface ThumbnailProps {
+export interface ThumbnailProps {
   result: {
     backdrop_path: string;
     poster_path: string;
@@ -16,8 +16,8 @@ interface ThumbnailProps {
   };
 }
 
-const Thumbnail = forwardRef(
-  ({ result }: ThumbnailProps, ref: React.Ref<HTMLDivElement>) => {
+const Thumbnail = forwardRef<HTMLDivElement, ThumbnailProps>(
+  ({ result }: ThumbnailProps, ref) => {
     const BASE_URL = 'https://image.tmdb.org/t/p/original/';
 
     return (
