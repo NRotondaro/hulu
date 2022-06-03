@@ -1,10 +1,10 @@
-export default function HeaderItem({ title, Icon }) {
+export const HeaderItem = ({ title, Icon }) => {
   return (
-    <div className='flex flex-col items-center cursor-pointer group w-12 sm:w-20 hover:text-white'>
-      <Icon className='h-8 mb-1 group-hover:animate-bounce' />
-      <p className='opacity-0 group-hover:opacity-100 tracking-widest'>
+    <div className='group flex w-12 cursor-pointer flex-col items-center hover:text-white sm:w-20'>
+      <Icon className='mb-1 h-8 group-hover:animate-bounce' />
+      <p className='tracking-widest opacity-0 group-hover:opacity-100'>
         {title}
       </p>
     </div>
   );
-}
+};
