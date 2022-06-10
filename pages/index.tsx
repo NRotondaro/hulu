@@ -1,3 +1,4 @@
+import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { Header } from '../components/Header';
 import { Nav } from '../components/Nav';
@@ -18,7 +19,7 @@ export default function Home({ results }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const genre = context.query.genre;
   const data = await fetchTrending(genre);
 
@@ -27,4 +28,4 @@ export async function getServerSideProps(context) {
       results: data.results,
     },
   };
-}
+};
