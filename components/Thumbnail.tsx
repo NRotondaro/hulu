@@ -23,8 +23,7 @@ export const Thumbnail = forwardRef<HTMLDivElement, ThumbnailProps>(
     return (
       <div
         ref={ref}
-        className='group transform cursor-pointer p-2 transition duration-200 ease-in hover:z-50 sm:hover:scale-105'
-      >
+        className='group transform cursor-pointer p-2 transition duration-200 ease-in hover:z-50 sm:hover:scale-105'>
         <Image
           layout='intrinsic'
           src={`${BASE_URL}${result.backdrop_path || result.poster_path}`}
@@ -42,14 +41,14 @@ export const Thumbnail = forwardRef<HTMLDivElement, ThumbnailProps>(
           <div>
             <p className='flex items-center opacity-0 group-hover:opacity-100'>
               {result.media_type && `${result.media_type} •`}{' '}
-              {result.release_date || result.first_air_date} •{' '}
-              <ThumbUpIcon className='mx-2 h-5' /> {result.vote_count}
+              {result.release_date || result.first_air_date} • <ThumbUpIcon className='mx-2 h-5' />{' '}
+              {result.vote_count}
             </p>
           </div>
         </div>
       </div>
     );
-  }
+  },
 );
 
 Thumbnail.displayName = 'Thumbnail';

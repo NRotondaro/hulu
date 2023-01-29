@@ -14,7 +14,7 @@ interface ResultsProps {
       release_date: string;
       first_air_date: string;
       vote_count: string;
-    }
+    },
   ];
 }
 
