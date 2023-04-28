@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ThumbUpIcon } from '@heroicons/react/outline';
+import { HandThumbUpIcon } from '@heroicons/react/24/outline';
 import { forwardRef } from 'react';
 
 export interface ThumbnailProps {
@@ -41,8 +41,8 @@ export const Thumbnail = forwardRef<HTMLDivElement, ThumbnailProps>(
           <div>
             <p className='flex items-center opacity-0 group-hover:opacity-100'>
               {result.media_type && `${result.media_type} •`}{' '}
-              {result.release_date || result.first_air_date} • <ThumbUpIcon className='mx-2 h-5' />{' '}
-              {result.vote_count}
+              {result.release_date || result.first_air_date} •{' '}
+              <HandThumbUpIcon className='mx-2 h-5' /> {result.vote_count}
             </p>
           </div>
         </div>
